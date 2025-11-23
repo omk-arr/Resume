@@ -1,217 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="headers">Omkar Pawar - Resume</title>
-    <style>
-      @page {
-        size: A4;
-        margin: 0.5in;
-      }
-      .headers {
-        color: rgb(90, 66, 121);
-      }
-      @media print {
-        body {
-          margin: 0;
-          box-shadow: none;
-        }
-        .no-print {
-          display: none;
-        }
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omkar Pawar — Resume</title>
+  <style>
+    :root {
+      --accent: #222;
+      --muted: #666;
+      --heading: #111
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      margin: 40px;
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto
+    }
+
+    header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 700
+    }
+
+    .role {
+      color: #353535;
+      margin-top: 4px
+    }
+
+    .meta {
+      margin-top: 8px;
+      color: #353535;
+      font-size: 13px
+    }
+
+    .meta .links {
+      color: inherit;
+      /* matches your surrounding text color */
+      text-decoration: none;
+      /* removes underline, optional */
+    }
+
+    .meta .links:hover {
+      text-decoration: underline;
+      /* optional hover effect */
+    }
+
+    h3 {
+      color: #505050;
+      font-size: 16px;
+      margin: 22px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: .6px
+    }
+
+    p,
+    li {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #3e3e3e
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 24px
+    }
+
+    .skills,
+    .experience,
+    .education,
+    .cert {
+      background: transparent
+    }
+
+    .job {
+      margin-bottom: 12px
+    }
+
+    ul {
+      margin: 4px 0 12px 0
+    }
+
+    .right {
+      font-size: 12px;
+      color: #3e3e3e;
+      text-align: right
+    }
+
+    .download-controls {
+      position: fixed;
+      right: 18px;
+      top: 12px
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid #888;
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 13px
+    }
+
+    .skills {
+      margin: 6px 0 0 0
+    }
+
+    .company {
+      color: #1E90FF;
+      font-size: 15px;
+    }
+
+    /* print rules: hide buttons when printing */
+    @media print {
+      .download-controls {
+        display: none
       }
 
       body {
-        width: 8.27in;
-        min-height: 11.69in;
-        margin: 0 auto;
-        padding: 0 0.5in;
-        font-family: "Segoe UI", sans-serif;
-        background: #fff;
-        color: #222;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        margin: 12mm
       }
+    }
+  </style>
+</head>
 
-      h2,
-      h3 {
-        margin-bottom: 5px;
-      }
-
-      .section {
-        margin-bottom: 20px;
-      }
-
-      .section-title {
-        border-bottom: 2px solid #444;
-        padding-bottom: 3px;
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: rgb(90, 66, 121);
-      }
-
-      ul {
-        padding-left: 20px;
-      }
-
-      .contact {
-        font-size: 1em;
-      }
-
-      .skills span {
-        color: #000;
-      }
-
-      .no-print {
-        margin-top: 20px;
-        text-align: center;
-      }
-
-      button {
-        padding: 8px 16px;
-        font-size: 1em;
-      }
-    </style>
-  </head>
-  <body>
-    <div
-      style="
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-      "
-    >
-      <h1 style="margin-bottom: 0px" class="headers">Omkar Pawar</h1>
-      <p style="margin: 4px 0 0 0" class="headers">Frontend Developer</p>
-    </div>
-    <div style="display: flex; justify-content: center">
-      <p class="contact headers">
-        +91 83084 81805 |
-        <a href="https://0mkar.vercel.app">0mkar.vercel.app</a> |
-        omi.s.pawar@gmail.com | 41, Neeladri Nagar, Electronics City, Bangalore
-      </p>
-    </div>
-
-    <div class="section">
-      <div class="section-title headers">Summary</div>
-      <p>
-        Currently in my notice period with last working day on 18th July, 2025,
-        I am a skilled full stack web developer(frontend heavy) with 2.7 years of expertise.
-        Proficient in building scalable, highly optimized and accessibility first web applications using React, API
-        development with Node.js, and SQL databases. I have honed my abilities
-        in these technologies throughout my career. For a detailed overview of
-        my work, feel free to explore my portfolio profile at
-        https://www.0mkar.vercel.app/.
-      </p>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Skills</div>
-      <div class="skills">
-        <ul>
-          <li>
-            <span><b>Frontend: </b> HTML, CSS, JavaScript, React, Redux</span>
-          </li>
-          <li>
-            <span><b>Frontend Tools: </b> Wwebpack, Babel, npm , Jest</span>
-          </li>
-          <li>
-            <span><b>Backend:</b> Node.js, Python Flask</span>
-          </li>
-          <li>
-            <span><b>Databases:</b> MS SQL Server</span>
-          </li>
-          <li>
-            <span><b>Tools & Platforms:</b> Git, Azure, SonarQube, Jira, Grafana</span>
-          </li>
-          <li>
-            <span><b>Languages:</b> JavaScript, Python, Java</span>
-          </li>
-          <li>
-            <span
-              ><b>Frameworks & Libraries:</b> Express.js, Tailwind CSS,
-              Bootstrap</span
-            >
-          </li>
-          <li>
-            <span><b>Methodologies:</b> Agile, Scrum</span>
-          </li>
-        </ul>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="name">Omkar Pawar</div>
+        <div class="role">Full Stack Developer</div>
+        <div class="meta">
+          <a class="links" href="tel:+918308481805">+91 8308481805 </a>&nbsp;&nbsp;
+          <a class="links" href="mailto:omkarop1012@gmail.com">omkarop1012@gmail.com </a>&nbsp;&nbsp;
+          <u><a class="links" href="https://0mkar.vercel.app/">Portfolio</a></u> &nbsp;&nbsp; <u><a class="links"
+              href="https://www.linkedin.com/in/omkar-pawar-1193161a5/">LinkedIn</a></u> &nbsp;&nbsp; <u><a
+              class="links" href="https://leetcode.com/u/o_m_k_a_r/">LeetCode</a></u> &nbsp;&nbsp; Bangalore
+        </div>
       </div>
-    </div>
+    </header>
 
-    <div class="section">
-      <div class="section-title">Work Experience</div>
-      <h3 class="headers">Full Stack Developer - Infosys Limited, Bangalore • May 2023 - Present</h3>
-      <ul>
-        <li>
-          Developed and maintained web apps using React.
-        </li>
-        <li>
-          Managed backend REST services using Node.js and integrated SQL Server
-          databases.
-        </li>
-        <li>
-          Experienced using Bootstrap, Tailwind and framer motion.
-        </li>
-        <li>
-          Optimized existing code base for better UI, performance and scalability.
-        </li>
-        <li>
-          Collaborated with other developers on code reviews, bug fixes and feature development.
-        </li>
-        <li>
-          Agile development process, sprint planning and stand-ups.
-        </li>
-        <li>
-          Git for version control, team collaboration and code management.
-        </li>
-      </ul>
+    <h3>Summary</h3>
+    <p>Full Stack Developer with 4 years of experience building scalable, high-performance web applications, designing
+      and delivering high-performance backend services.
+      Proficient in React, Node.js, SQL databases, and building both REST and GraphQL APIs. Skilled in database design,
+      performance tuning, and implementing scalable, secure service architectures. Hands-on experience deploying
+      cloud-native solutions on AWS and Azure. Known for writing clean, maintainable code and collaborating effectively
+      in Agile environments to deliver impactful product features.</p>
 
-      <h3 class="headers">Full Stack Trainee - Infosys Limited, Mysore • Dec 2022 - May 2023</h3>
-      <ul>
-        <li>Top Performer as a Trainee.</li>
-        <li>
-          Foundation training for HTML, CSS, JavaScript for web development.
-        </li>
-        <li>Trained in React for scalable, user friendly web pages.</li>
-        <li>
-          Trained in NodeJS for building server side APIs with MongoDB as a
-          Database.
-        </li>
-      </ul>
+    <h3>Skills</h3>
+    <p class="skills"><strong>Frontend</strong> - HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap</p>
+    <p class="skills"><strong>Backend</strong> - Node.js with Express.js</p>
+    <p class="skills"><strong>Databases</strong> - MSSQL Server, PostgreSQL, Sequelize ORM</p>
+    <p class="skills"><strong>Languages</strong> - JavaScript, Python, Java</p>
+    <p class="skills"><strong>Tools & Platforms</strong> - Git, AWS, Azure, SonarQube, Jira, Grafana</p>
 
-      <h3 class="headers">Developer Intern - Wipro Limited, Pune • Mar 2022 - May 2022</h3>
+    <h3>Experience</h3>
+
+    <div class="job">
+      <div style="display:flex;justify-content:space-between;align-items:start">
+        <div>
+          <strong>Backend Developer</strong><br>
+          <small class="company">Gammastack</small>
+        </div>
+        <div class="right">Bangalore<br>July 2025 - Present</div>
+      </div>
+      <p style="margin: 0;"><em>iGaming / Online Casino Applications</em></p>
       <ul>
-        <li>Hands on training in HTML, CSS, JavaScript and Java</li>
-        <li>Built Movie Booking Application.</li>
+        <li>Developed and optimized backend APIs using Node.js, Sequelize ORM, and PostgreSQL, ensuring high performance
+          and reliability for large-scale gaming platforms</li>
+        <li>Designed and maintained cron jobs and background workers to handle recurring tasks such as transaction
+          processing, reporting, and user notifications</li>
+        <li>Built and managed real-time socket connections to support live betting, in-game events, and seamless player
+          interactions</li>
+        <li>Implemented third-party integrations to support communication, automation, and player engagement features
+        </li>
+        <li>Implemented secure third-party payment gateways to enable seamless deposits and withdrawals across multiple
+          currencies and cryptocurrencies</li>
+        <li>Scaled APIs to handle high concurrency and traffic spikes from thousands of simultaneous players, optimizing
+          queries and server performance</li>
+        <li>Collaborated with cross-functional teams to design and roll out new game features and player management
+          functionalities</li>
+        <li>Implemented strong security practices, high code quality standards, and performance optimizations to support
+          regulatory-compliant gaming platforms</li>
       </ul>
     </div>
 
-    <div class="section">
-      <div class="section-title">Education</div>
+    <div class="job">
+      <div style="display:flex;justify-content:space-between;align-items:start">
+        <div>
+          <strong>Full Stack Developer</strong><br>
+          <small class="company">Infosys Limited</small>
+        </div>
+        <div class="right">Bangalore<br>December 2022 - July 2025</div>
+      </div>
       <ul>
-        <li>
-          B.Tech - SVERI's College of Engineering, Pandharpur • July 2018 - June 2022 
-          9.8 CGPA
+        <li>Trained and assigned to client projects to build production-grade web applications using React and Node.js
         </li>
-        <li>HSC - Sadashivrao Mane Vidyalaya, Akluj • July 2016 - May 2018 - 90.77%</li>
-        <li>SSC - Sadashivrao Mane Vidyalaya, Akluj • June 2015 - May 2016 - 92.80%</li>
-      </ul>
-    </div>
-    <div class="section">
-      <div class="section-title">Certifications</div>
-      <ul>
-        <li>Infosys Certified React Professional</li>
-        <li>Infosys Certified Node Associate</li>
-        <li>Infosys Certified GenAI Professional</li>
+        <li>Developed and maintained an internal admin dashboard and a restricted-access public application for P&G (P&G
+          Genuine)</li>
+        <li>Built and enhanced features enabling clients to upload product metadata along with product images and
+          product location information</li>
+        <li>Developed verification tools used by P&G's investigation teams to review client uploads and classify
+          products as authentic or counterfeit</li>
+        <li>Built and maintained frontend interfaces using React, ensuring smooth user experience and high performance
+        </li>
+        <li>Managed backend services using Node.js and integrated SQL Server databases for secure, reliable data
+          operations</li>
+        <li>Utilized UI frameworks and libraries like Bootstrap and Tailwind to improve design consistency and user
+          interaction</li>
       </ul>
     </div>
 
-    <div class="no-print" style="cursor: pointer">
-      <button onclick="window.print()">Download as PDF</button>
+    <div class="job">
+      <div style="display:flex;justify-content:space-between;align-items:start">
+        <div>
+          <strong>Developer Intern</strong><br>
+          <small class="company">Wipro Limited</small>
+        </div>
+        <div class="right">Remote<br>March 2022 - May 2022</div>
+      </div>
+      <ul>
+        <li>Gained practical, hands-on experience in HTML, CSS, JavaScript, and Node.js</li>
+        <li>Delivered a capstone project with distinction, earning a Top Performer certificate</li>
+      </ul>
     </div>
-  </body>
+
+    <div class="job">
+      <div style="display:flex;justify-content:space-between;align-items:start">
+        <div>
+          <strong>Freelancer</strong><br>
+          <small class="company">Outlier by Scale AI</small>
+        </div>
+        <div class="right">Remote<br>January 2022 - December 2022</div>
+      </div>
+      <ul>
+        <li>Delivered full-stack development tasks spanning responsive frontend interfaces and reliable backend API
+          implementations</li>
+        <li>Contributed to LLM training by reviewing, debugging, and refactoring AI-generated code to ensure accuracy,
+          quality, and adherence to best practices</li>
+        <li>Participated in weekly and monthly engineering challenges, delivering high-quality, time-sensitive technical
+          solutions</li>
+      </ul>
+    </div>
+
+    <h3>Education</h3>
+    <div style="display:flex;justify-content:space-between;align-items:start">
+      <div>
+        <strong>Bachelor of Technology</strong><br>
+        <small>SVERI's College of Engineering</small>
+      </div>
+      <div class="right">Pandharpur<br>July 2018 - August 2022</div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:start;margin-top:12px">
+      <div>
+        <strong>Higher Secondary Education</strong><br>
+        <small>Sadashivrao Mane Vidyalaya</small>
+      </div>
+      <div class="right">Akluj<br>June 2016 - May 2018</div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:start;margin-top:12px">
+      <div>
+        <strong>Secondary Education</strong><br>
+        <small>Sadashivrao Mane Vidyalaya</small>
+      </div>
+      <div class="right">Akluj<br>June 2015 - May 2016</div>
+    </div>
+
+    <h3>Certification</h3>
+    <p><strong>Infosys Certified React Professional</strong><br><small class="company">Infosys Limited</small></p>
+    <p><strong>Infosys Certified Node Associate</strong><br><small class="company">Infosys Limited</small></p>
+    <p><strong>Infosys Certified GenAI Professional</strong><br><small class="company">Infosys Limited</small></p>
+
+  </div>
+
+  <script>
+    document.getElementById('exportPdf').addEventListener('click', function () {
+      // Trigger the browser print dialog. User can choose "Save as PDF".
+      window.print();
+    });
+  </script>
+</body>
+
 </html>
